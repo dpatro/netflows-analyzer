@@ -3,23 +3,25 @@
 <meta charset="utf-8">
 
 <style>
+    #wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+
     #intro {
-        margin: auto;
+        text-align: center;
     }
 
     #selector {
-        width: 50%;
-        margin: 10px auto;
+        text-align: center;
     }
 
     #graph {
         margin: 10px auto;
-        width: 80%;
         height: 900px;
     }
 
     #flows {
-        width: 80%;
     }
 
     table {
@@ -100,20 +102,22 @@
 
 <body>
 
-<div id="intro">
-    <h2>Network Flows Analyzer</h2>
-</div>
+<div id="wrapper">
+    <div id="intro">
+        <h2>Network Flows Analyzer</h2>
+    </div>
 
-<div id="selector">
-    <select name="dataSelector" onchange="loadData(this)" autocomplete="off">
-        <option value="" SELECTED>Select Data to Load</option>
-        <option value="smallFlows">Small Flows</option>
-        <option value="bigFlows">Big Flows</option>
-    </select>
-</div>
+    <div id="selector">
+        <select name="dataSelector" onchange="loadData(this)" autocomplete="off">
+            <option value="" SELECTED>Select Data to Load</option>
+            <option value="smallFlows">Small Flows</option>
+            <option value="bigFlows">Big Flows</option>
+        </select>
+    </div>
 
-<div id="graph"></div>
-<div id="flows" ></div>
+    <div id="graph"></div>
+    <div id="flows" ></div>
+</div>
 
 <script src="scripts/d3.min.js"></script>
 <script src="scripts/main.js"></script>
