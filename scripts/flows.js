@@ -7,7 +7,7 @@ function fillTable(flows) {
 
     console.log(flows);
     //The columns
-    var columns = ["sip", "dip", "n"];
+    var columns = ["sip", "dip", "startt", "endt", "n"];
 
     var table = d3.select("#flows").append("table"),
         thead = table.append("thead"),
@@ -16,7 +16,7 @@ function fillTable(flows) {
     // append the header row
     thead.append("tr")
         .selectAll("th")
-        .data(["Source IP", "Destination IP", "Number of Packets"])
+        .data(["Source IP", "Destination IP", "Start Time", "End Time", "Number of Packets"])
         .enter()
         .append("th")
             .text(function(column) { return column; });

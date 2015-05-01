@@ -15,7 +15,7 @@ function loadData(selector){
 
     // Remove old drawings
     d3.select("#graph").select("svg").remove();
-    d3.select("#flows").select("svg").remove();
+    d3.select("#flows").select("table").remove();
 
     drawGraph("data/"+selector.value);
   }
