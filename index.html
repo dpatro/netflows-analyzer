@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<meta charset="utf-8">
+<head>
+    <title>Netflows Visualizer</title>
+    <meta charset="utf-8">
+</head>
 
 <style>
     #wrapper {
@@ -105,6 +108,19 @@
 <div id="wrapper">
     <div id="intro">
         <h2>Network Flows Analyzer</h2>
+        <p>This is a Directed Research project done by Dipankar Patro under Prof. Mike Zyda.</p>
+        <p>This web-application presents how d3.js is used to visualize the characteristics of flows in a Computer
+            Communication Network.
+        </p>
+        <h3>How to use:</h3>
+    </div>
+    <div style="margin: 0 0 0 20%">
+        <ol start="1">
+            <li>Select a data set to load from the selector given below.</li>
+            <li>A graph will show up having IP addresses as nodes and Flows as edges between them.
+                The more the color intensity on an edge, the more communication between those IPs.</li>
+            <li>Click on any node to show the ingress flows on the IP in a table below the graph.</li>
+        </ol>
     </div>
 
     <div id="selector">

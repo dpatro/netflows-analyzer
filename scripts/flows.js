@@ -15,7 +15,7 @@ function fillTable(flows) {
     // append the header row
     thead.append("tr")
         .selectAll("th")
-        .data(["Source IP", "Destination IP", "Start Time", "End Time", "Number of Packets"])
+        .data(["Source IP", "Destination IP", "Start Time (epoch)", "End Time (epoch)", "Number of Packets"])
         .enter()
         .append("th")
             .text(function(column) { return column; });
