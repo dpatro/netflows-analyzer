@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+
+<style>
+    #intro {
+        margin: auto;
+    }
+
+    #selector {
+        width: 50%;
+        margin: 10px auto;
+    }
+
+    #graph {
+        margin: 10px auto;
+        width: 80%;
+        height: 900px;
+    }
+
+    #flows {
+        margin: 0 auto;
+        min-height: 100px;
+    }
+
+    #card {
+        float: left;
+        width: 30%;
+        margin: 10px auto;
+    }
+
+    path.link {
+      fill: none;
+      stroke-width: 1.5px;
+      stroke: #aa0;
+    }
+
+    path.link.twofive {
+      opacity: 0.25;
+    }
+
+    path.link.fivezero {
+      opacity: 0.50;
+    }
+
+    path.link.sevenfive {
+      opacity: 0.75;
+    }
+
+    path.link.onezerozero {
+      opacity: 1.0;
+    }
+
+    path.link.hidden {
+      stroke: #222;
+    }
+
+    circle {
+      fill: #ccc;
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+
+    text {
+      fill: #000;
+      font: 10px sans-serif;
+      pointer-events: none;
+    }
+
+    node {
+      fill: #fff;
+      opacity: 0.8;
+    }
+</style>
+
+<body>
+
+<div id="intro">
+    <h2>Network Flows Analyzer</h2>
+</div>
+
+<div id="selector">
+    <select name="dataSelector" onchange="loadData(this)" autocomplete="off">
+        <option value="" SELECTED>Select Data to Load</option>
+        <option value="smallFlows">Small Flows</option>
+        <option value="bigFlows">Big Flows</option>
+    </select>
+</div>
+
+<div id="graph"></div>
+<div id="flows" ></div>
+
+<script src="scripts/d3.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/graph.js"></script>
+<script src="scripts/flows.js"></script>
+
+</body>
+
+</html>
