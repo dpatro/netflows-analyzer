@@ -5,7 +5,6 @@
 function fillTable(flows) {
     d3.select("#flows").select("table").remove();
 
-    console.log(flows);
     //The columns
     var columns = ["sip", "dip", "startt", "endt", "n"];
 
